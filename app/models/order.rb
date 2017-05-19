@@ -13,8 +13,8 @@ class Order < ApplicationRecord
      self.token = SecureRandom.uuid
    end
 
-   def set_payment_with(method)
-     self.update_colums(payment_method :method )
+   def set_payment_with!(method)
+   self.update_columns(payment_method: method )
    end
 
     def pay!
