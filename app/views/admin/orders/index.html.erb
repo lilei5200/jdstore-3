@@ -1,6 +1,5 @@
 <h2>订单列表 </h2>
-
- <table class="table table-bordered">
+<table class="table table-bordered">
    <thead>
      <tr>
        <th>#</th>
@@ -9,9 +8,8 @@
         <th>订单状态</th>
       </tr>
     </thead>
-
-      <tbody>
-        <% @order.each do |order| %>
+    <tbody>
+        <% @orders.each do |order| %>
         <tr>
           <td> <%= link_to(order.id, admin_order_path(order) ) %> </td>
           <td> <%= order.created_at.to_s(:long) %> </td>
